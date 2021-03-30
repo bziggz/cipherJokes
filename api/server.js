@@ -20,5 +20,5 @@ app.get('/pig', (request, response) => {
 })
 
 app.listen(port, () => {
-  console.log(`Listening on port ${port}.`);
+  console.log(`Listening on port ${8080}.`);
 });
