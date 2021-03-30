@@ -45,16 +45,14 @@ app.get('/random', (req, response) => {
   fetch('https://api.icndb.com/jokes/random?exclude=[explicit]')
     .then(res => res.json())
     .then(data => JSON.stringify(data.value.joke).replaceAll('&quot;', '"'))
-    .then(joke => response.send(joke))
-    .then(response.status(200));
+    .then(joke => response.status(200).send(joke))
 });
 
 app.get('/pig', (req, response) => {
   fetch('https://api.icndb.com/jokes/random?exclude=[explicit]')
     .then(res => res.json())
     .then(data => JSON.stringify(data.value.joke).replaceAll('&quot;', '"'))
-    .then(joke => response.send(sentenceToPigLatin(joke)))
-    .then(response.status(200));
+    .then(joke => response.status(200).send(sentenceToPigLatin(joke)))
 })
 
 app.listen(port, () => {
