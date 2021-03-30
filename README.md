@@ -22,7 +22,7 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
 - If a word contains no vowels ('my'), the word is returned as normal.
 
 <h3>Downloading Image and Creating Container</h3>
-  <code>docker build https://github.com/bziggz/cipherJokes#main:docker</code>
+  <code>docker build https://github.com/bziggz/cipherJokes#main</code>
 
 <h3>Automated Testing</h3>
   <code>docker-compose -f docker-compose-test.yml up</code>
@@ -33,8 +33,7 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
   <h4>Endpoints</h4>
     <pre>
     <code>localhost:3000</code> -- retrieve a random Chuck Norris joke
-    <code>localhost:3000/pig</code> -- retrieve a pig-latinated Chuck Norris Joke
-    </pre>
+    <code>localhost:3000/pig</code> -- retrieve a pig-latinated Chuck Norris Joke</pre>
 <h3>Implementation Notes</h3>
   - The filetree is designed to scale, allowing for easy implementation of possible
   desired additions, such as retrieving a joke by id or category, or retrieving a
