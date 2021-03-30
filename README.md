@@ -66,7 +66,7 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
       }
     </code></pre>
     format would speed up retrieval for specific jokes. Of course, this would only work
-    within the current session unless a persistent databse layer is implemented, perhaps 
+    within the current session unless a persistent database layer is implemented, perhaps 
     through some sort of bastardized postgres/mongodb hybrid...
 
 <h3>Comment Style</h3>
