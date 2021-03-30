@@ -26,9 +26,13 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
 
 <h3>Automated Testing</h3>
   <code>docker-compose -f docker-compose-test.yml up --abort-on-container-exit</code>
+  
+  This will run automated tests (found in /tests/test.js) and the close both containers.
 
 <h3>Manual Testing</h3>
   <code>docker-compose up</code>
+  
+  This will spin up the server container for testing in local browser.
 
   <h4>Endpoints</h4>
     <pre>
