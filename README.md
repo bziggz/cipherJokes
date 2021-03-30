@@ -42,7 +42,9 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
 - The api urls can be found in /api/utils/constants
 
 - Currently, as this is a job interview and jokes are being retrieved at random,
-    all jokes are being filtered to exclude explicit content.
+    all jokes are being filtered to exclude explicit content, though those filters
+    are applied by icndb.com, and do not necessarily reflect those of the 
+    developer.
 
 <h3>Possible Optimizations</h3>
   - A random joke could be retrieved on server start, then on endpoint request, said
