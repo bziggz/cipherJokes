@@ -22,7 +22,7 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
 - If a word contains no vowels ('my'), the word is returned as normal.
 
 <h3>Downloading Image and Creating Container</h3>
-  <code>docker build https://github.com/bziggz/cipherJokes#main</code>
+  <code>docker build https://github.com/bziggz/cipherJokes.git#main</code>
 
 <h3>Automated Testing</h3>
   <code>docker-compose -f docker-compose-test.yml up --abort-on-container-exit</code>
