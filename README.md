@@ -1,6 +1,7 @@
 # cipherJokes
 A RESTful API for retrieving a random joke, and converting it to pig latin.
 
+![Chuck_Pig](https://user-images.githubusercontent.com/50502798/113039203-68265880-9165-11eb-8220-c4a486e15922.png)
 
 <em>Pig Latin Rules sourced from https://en.wikipedia.org/wiki/Pig_Latin</em>
 
@@ -28,4 +29,36 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
 <h3>Manual Testing</h3>
   <code>docker-compose up</code>
 
+  <h4>Endpoints</h4>
+    localhost:3000 -- retrieve a random Chuck Norris joke
+    localhost:3000/pig -- retrieve a pig-latinated Chuck Norris Joke
 
+<h3>Implementation Notes</h3>
+  - The filetree is designed to scale, allowing for easy implementation of possible
+  desired additions, such as retrieving a joke by id or category, or retrieving a
+  joke from a different api.
+
+  - The api urls can be found in /api/utils/constants
+
+  - Currently, as this is a job interview and jokes are being retrieved at random,
+    all jokes are being filtered to exclude explicit content.
+
+<h3>Possible Optimizations</h3>
+  - A random joke could be retrieved on server start, then on endpoint request, said
+    cached joke could be sent or pig-latinated and sent. The server would then retrieve
+    a new random joke and cache that for the next request.
+  
+  - If retrieving a joke by id is ever implemented, caching already-seen jokes in a 
+    <code>
+      {
+        id,
+        joke,
+      }
+    </code>
+    format would speed up retrieval for specific jokes. Of course, this would only work
+    within the current session unless a persistent databse layer is implemented, perhaps 
+    through some sort of bastardized postgres/mongodb hybrid...
+
+<h3>Comment Style</h3>
+  - I've tried to be so explicit in variable and function names that additional
+  in-file comments would be redundant.
