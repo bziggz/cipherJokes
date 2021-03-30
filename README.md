@@ -25,7 +25,7 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
   <code>docker build https://github.com/bziggz/cipherJokes#main</code>
 
 <h3>Automated Testing</h3>
-  <code>docker-compose -f docker-compose-test.yml up</code>
+  <code>docker-compose -f docker-compose-test.yml up --abort-on-container-exit</code>
 
 <h3>Manual Testing</h3>
   <code>docker-compose up</code>
