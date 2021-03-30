@@ -37,4 +37,4 @@ const sentenceToPigLatin = (sentence) => {
     .join(' ');
 }
 
-module.exports = sentenceToPigLatin;
+module.exports = { sentence: sentenceToPigLatin, word: wordToPigLatin };

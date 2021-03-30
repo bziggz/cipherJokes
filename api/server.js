@@ -1,6 +1,6 @@
 const Express = require('express');
-const fetchRandomJoke = require('./routes/random');
-const sentenceToPigLatin = require('./utils/pigLatinator');
+const fetchRandomChuckNorrisJoke = require('./routes/random');
+const sentenceToPigLatin = require('./utils/pigLatinator').sentence;
 
 const app = Express();
 const port = 8080;
@@ -8,17 +8,17 @@ const port = 8080;
 app.use(Express.json());
 
 app.get('/', (request, response) => {
-  fetchRandomJoke()
+  fetchRandomChuckNorrisJoke()
     .then(joke => response.status(200).send(joke))
     .catch(e => console.log(e));
 });
 
 app.get('/pig', (request, response) => {
-  fetchRandomJoke()
+  fetchRandomChuckNorrisJoke()
     .then(joke => response.status(200).send(sentenceToPigLatin(joke)))
     .catch(e => console.log(e));
 })
 
 app.listen(port, () => {
-  console.log("Listening on port 3000");
+  console.log(`Listening on port ${port}.`);
 });
