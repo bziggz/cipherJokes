@@ -3,7 +3,7 @@ const fetchRandomJoke = require('./routes/random');
 const sentenceToPigLatin = require('./utils/pigLatinator');
 
 const app = Express();
-const port = 3000;
+const port = 8080;
 
 app.use(Express.json());
 
