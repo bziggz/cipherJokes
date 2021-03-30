@@ -31,9 +31,8 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
   <code>docker-compose up</code>
 
   <h4>Endpoints</h4>
-
-    localhost:3000 -- retrieve a random Chuck Norris joke
-    localhost:3000/pig -- retrieve a pig-latinated Chuck Norris Joke
+    <code>localhost:3000</code> -- retrieve a random Chuck Norris joke
+    <code>localhost:3000/pig</code> -- retrieve a pig-latinated Chuck Norris Joke
 
 <h3>Implementation Notes</h3>
   - The filetree is designed to scale, allowing for easy implementation of possible
@@ -51,14 +50,12 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
     a new random joke and cache that for the next request.
   
 - If retrieving a joke by id is ever implemented, caching already-seen jokes in a 
-    <pre>
-    <code>
+    <pre><code>
       {
         id,
         joke,
       }
-    </code>
-    </pre>
+    </code></pre>
     format would speed up retrieval for specific jokes. Of course, this would only work
     within the current session unless a persistent databse layer is implemented, perhaps 
     through some sort of bastardized postgres/mongodb hybrid...
