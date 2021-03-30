@@ -20,16 +20,20 @@ const wordToPigLatin = (word) => {
       }
     }
   }
+
+  return word
 }
 
 const sentenceToPigLatin = (sentence) => {
   const sentenceArr = sentence.split(' ');
-  const regExp = /\w+/g;
-  return sentence.replaceAll(regExp, (word) => wordToPigLatin(word))
+  const regExp = /\w+'?\w+/g;
+
+  return sentence.toLowerCase()
+    .replaceAll(regExp, (word) => wordToPigLatin(word))
     .split(' ')
     .map((word, idx) => {
       if (sentenceArr[idx][0].match(/[A-Z]/)) {
-        return word[0].toUpperCase() + word.slice(1).toLowerCase();
+        return word[0].toUpperCase() + word.slice(1);
       }
 
       return word
@@ -38,21 +42,19 @@ const sentenceToPigLatin = (sentence) => {
 }
 
 app.get('/random', (req, response) => {
-  let joke = '';
   fetch('https://api.icndb.com/jokes/random?exclude=[explicit]')
     .then(res => res.json())
-    .then(data => JSON.stringify(data.value.joke))
-    .then(j => joke = j)
-    .then(_ => console.log(joke))
+    .then(data => JSON.stringify(data.value.joke).replaceAll('&quot;', '"'))
+    .then(joke => response.send(joke))
+    .then(response.status(200));
 });
 
 app.get('/pig', (req, response) => {
-  let joke = '';
   fetch('https://api.icndb.com/jokes/random?exclude=[explicit]')
     .then(res => res.json())
-    .then(data => JSON.stringify(data.value.joke))
-    .then(j => joke = j)
-    .then(_ => console.log(joke))
+    .then(data => JSON.stringify(data.value.joke).replaceAll('&quot;', '"'))
+    .then(joke => response.send(sentenceToPigLatin(joke)))
+    .then(response.status(200));
 })
 
 app.listen(port, () => {
