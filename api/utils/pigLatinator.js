@@ -21,7 +21,7 @@ const sentenceToPigLatin = (sentence) => {
   const regExp = /\w+'?\w*/g;
 
   return sentence.toLowerCase()
-    .replaceAll(regExp, (word) => wordToPigLatin(word))
+    .replace(regExp, (word) => wordToPigLatin(word))
     .split(' ')
     .map((word, idx) => {
       if (sentenceArr[idx][0].match(/[A-Z]/)) {
@@ -36,7 +36,5 @@ const sentenceToPigLatin = (sentence) => {
     })
     .join(' ');
 }
-
-console.log(sentenceToPigLatin('A'))
 
 module.exports = sentenceToPigLatin;
