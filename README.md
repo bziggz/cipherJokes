@@ -1,7 +1,7 @@
 # cipherJokes
 A RESTful API for retrieving a random joke, and converting it to pig latin.
 
-![Chuck_Pig](https://github.com/bziggz/cipherJokes/issues/4)
+![Chuck_Pig](https://user-images.githubusercontent.com/50502798/113039203-68265880-9165-11eb-8220-c4a486e15922.png)
 
 <em>Pig Latin Rules sourced from https://en.wikipedia.org/wiki/Pig_Latin</em>
 
