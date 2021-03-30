@@ -6,6 +6,7 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
 <em>Pig Latin Rules sourced from https://en.wikipedia.org/wiki/Pig_Latin</em>
 
 <h3>Rules:</h3>
+
   - The character 'y' does not count as a vowel.
 
   - If the word starts with a vowel (a, e, i, o, u), move the vowel to the 
