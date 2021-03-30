@@ -35,6 +35,7 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
     <code>localhost:3000</code> -- retrieve a random Chuck Norris joke
     <code>localhost:3000/pig</code> -- retrieve a pig-latinated Chuck Norris Joke</pre>
 <h3>Implementation Notes</h3>
+
   - The filetree is designed to scale, allowing for easy implementation of possible
   desired additions, such as retrieving a joke by id or category, or retrieving a
   joke from a different api.
@@ -47,6 +48,7 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
     developer.
 
 <h3>Possible Optimizations</h3>
+
   - A random joke could be retrieved on server start, then on endpoint request, said
     cached joke could be sent or pig-latinated and sent. The server would then retrieve
     a new random joke and cache that for the next request.
@@ -63,5 +65,6 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
     through some sort of bastardized postgres/mongodb hybrid...
 
 <h3>Comment Style</h3>
+
   - I've tried to be so explicit in variable and function names that additional
   in-file comments would be redundant.
