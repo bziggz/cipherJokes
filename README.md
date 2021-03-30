@@ -37,8 +37,8 @@ A RESTful API for retrieving a random joke, and converting it to pig latin.
 
   <h4>Endpoints</h4>
     <pre>
-    <code>localhost:3000</code> -- retrieve a random Chuck Norris joke
-    <code>localhost:3000/pig</code> -- retrieve a pig-latinated Chuck Norris Joke</pre>
+    <code>localhost:8080</code> -- retrieve a random Chuck Norris joke
+    <code>localhost:8080/pig</code> -- retrieve a pig-latinated Chuck Norris Joke</pre>
 <h3>Implementation Notes</h3>
 
   - The filetree is designed to scale, allowing for easy implementation of possible
